@@ -1,0 +1,12 @@
+# uvicorn main:app --reload
+
+
+fastapi
+uvicorn
+easyocr
+torch==2.0.1  # اختر النسخة المناسبة حسب render
+numpy
+Pillow
+psycopg2
+python-dotenv
+rapidfuzz
