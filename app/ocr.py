@@ -2,7 +2,7 @@
 import easyocr
 from typing import List
 
-reader = easyocr.Reader(['en', 'ar'], gpu=False)
+reader = easyocr.Reader(['en', 'ar'], gpu=True)
 
 def extract_text(image_path: str) -> List[str]:
     """

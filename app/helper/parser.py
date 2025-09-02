@@ -7,7 +7,7 @@ MEDICAL_KEYWORDS = [
     
     "glucose", "glu", "sugar", "fbs", "rbs", "hba1c","calcium","total cholesterol",
 
-    "cholesterol", "ldl", "hdl", "vldl", "triglycerides", "tg", "lipid", "lipoprotein",
+    "cholesterol", "ldl", "hdl","hdl -c" , "tc m" "vldl", "triglycerides", "tg", "lipid", "lipoprotein",
 
   
     "urea", "bun", "creatinine", "uric acid", "egfr","ua"
@@ -23,9 +23,9 @@ MEDICAL_KEYWORDS = [
 
     "crp", "hs-crp", "esr", "ana", "rf", "procalcitonin", "igg", "igm", "iga",
 
-    "tsh", "ft3", "ft4", "t3", "t4", "testosterone", "estrogen", "progesterone", "lh", "fsh", "prolactin", "insulin",
+    "ft3", "ft4", "t3", "t4", "testosterone", "estrogen", "progesterone", "lh", "fsh", "prolactin", "insulin",
 
-    "tsh", "t3", "t4", "anti-tpo", "anti-tg",
+    "tsh","TSH", "t3", "t4", "anti-tpo", "anti-tg",
 
   
     "vitamin d", "vit d", "vitamin b12", "folate", "folic acid",
@@ -56,7 +56,7 @@ def clean_text(raw_text):
 
 
 # دالة التطابق التقريبي
-def fuzzy_match(token, threshold=85):
+def fuzzy_match(token, threshold=90):
     match, score, _ = process.extractOne(token, MEDICAL_KEYWORDS, scorer=fuzz.partial_ratio)
     if score >= threshold:
         return match
