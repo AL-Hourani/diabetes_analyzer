@@ -3,12 +3,12 @@ from fastapi.responses import JSONResponse
 import shutil
 import uuid
 import os
-from ocr import extract_text
-from helper.parser import clean_text
-from helper.parser import extract_medical_values
-from helper.utils import normalize_keys_fuzzy
-from helper.mapping import STANDARD_MAPPING
-from helper.converting import analyze_results
+from app.ocr import extract_text
+from app.helper.parser import clean_text
+from app.helper.parser import extract_medical_values
+from app.helper.utils import normalize_keys_fuzzy
+from app.helper.mapping import STANDARD_MAPPING
+from app.helper.converting import analyze_results
 
 
 
