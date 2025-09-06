@@ -1,6 +1,5 @@
 
 
-# ✅ الحدود الطبيعية لكل التحاليل
 NORMAL_RANGES = {
     "GLUCOSE": (70, 110),             # mg/dL
     "UREA": (15, 45),                 # mg/dL
